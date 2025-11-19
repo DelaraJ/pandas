@@ -1,0 +1,8 @@
+version: "3"
+services:
+  pandas-test:
+    build: .
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    command: bash scripts/run_validation.sh
