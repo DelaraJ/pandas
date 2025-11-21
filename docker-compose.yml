@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  pandas:
+    build:
+      context: .
+      dockerfile: tooling/debug/Dockerfile.pandas-debug
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    command: bash compile.sh
